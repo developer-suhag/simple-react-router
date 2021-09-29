@@ -1,0 +1,13 @@
+body {
+  background: #f2e9e4;
+}
+
+.friend-length {
+  font-size: 30px;
+  margin-bottom: 80px;
+}
+.all-friends {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
