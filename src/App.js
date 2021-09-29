@@ -6,6 +6,7 @@ import Friends from "./components/Friends/Friends";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import PageError from "./components/PageError/PageError";
+import PostDetail from "./components/PostDetail/PostDetail";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path="/home">
             <Home></Home>
+          </Route>
+          <Route path="/post/:postId">
+            <PostDetail></PostDetail>
           </Route>
           <Route path="/friends">
             <Friends></Friends>
