@@ -1,21 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Friend.css";
 
 const Friend = (props) => {
-  const { name, location, email, phone, picture } = props.friend;
-  const { first, last } = name;
-  const { medium, large } = picture;
-  const { city, country } = location;
+  const { id, name, email, website, phone, address } = props.friend;
+  const { city } = address;
 
   return (
     <div className="friend">
-      <img src={large} alt="" />
-      <h3>Hi, I am {first + " " + last}</h3>
-      <p>
-        I live at {city} in {country}
-      </p>
+      <h3>Hi, I am {name}</h3>
+      <p>I live in {city}</p>
       <p>Email me: {email}</p>
       <p>Call Me: {phone}</p>
+      <button style={{ padding: "5px 20px" }}>
+        <Link to={`/friend/${id}`}>Visit</Link>
+      </button>
     </div>
   );
 };
